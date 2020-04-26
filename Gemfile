@@ -63,6 +63,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # File storage
 gem 'carrierwave', '~> 2.1'
+gem 'fog-local', '~> 0.6.0'
 
 # Video processing for file storage
 gem 'carrierwave-video', '~> 0.6.0'
