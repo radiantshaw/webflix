@@ -15,6 +15,12 @@ port        ENV.fetch("PORT") { 3000 }
 #
 environment ENV.fetch("RAILS_ENV") { "development" }
 
+# Make sure the server is only accessible through UNIX socket
+clear_binds!
+
+# Bind the server to a UNIX socket
+bind ENV.fetch("SOCKETFILE") { "unix://tmp/sockets/server.sock" }
+
 # Specifies the number of `workers` to boot in clustered mode.
 # Workers are forked webserver processes. If using threads and workers together
 # the concurrency of the application would be max `threads` * `workers`.
