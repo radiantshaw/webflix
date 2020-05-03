@@ -33,3 +33,6 @@
 # Ignore editor files
 tags
 tags.*
+
+# Ignore CarrierWave uploads
+/public/uploads
